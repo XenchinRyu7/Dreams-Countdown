@@ -66,7 +66,7 @@ Workflow akan otomatis:
    - Source: **Deploy from a branch**
    - Branch: **`main`** / **`root`**
    - Folder: **`/ (root)`**
-4. **Website akan live** di: `https://github.com/XenchinRyu7/Dreams-Countdown.git`
+4. **Website akan live** di: `https://XenchinRyu7.github.io/Dreams-Countdown`
 
 ### ⚠️ **Catatan Penting**:
 - GitHub Pages akan otomatis deploy dari branch `main`
@@ -77,7 +77,7 @@ Workflow akan otomatis:
 
 Website akan otomatis terupdate setiap hari pada jam 07:00 WIB dan dapat diakses melalui GitHub Pages.
 
-**URL**: `https://github.com/XenchinRyu7/Dreams-Countdown.git`
+**URL**: `https://XenchinRyu7.github.io/Dreams-Countdown`
 
 ---
 
