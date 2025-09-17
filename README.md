@@ -62,16 +62,22 @@ Workflow akan otomatis:
 1. **Buat Repository Public** di GitHub
 2. **Push semua file** ke repository
 3. **Enable GitHub Pages**:
-   - Go to Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `gh-pages` / `root`
-4. **Website akan live** di: `https://[username].github.io/[repository-name]`
+   - Go to **Settings** → **Pages**
+   - Source: **Deploy from a branch**
+   - Branch: **`main`** / **`root`**
+   - Folder: **`/ (root)`**
+4. **Website akan live** di: `https://github.com/XenchinRyu7/Dreams-Countdown.git`
+
+### ⚠️ **Catatan Penting**:
+- GitHub Pages akan otomatis deploy dari branch `main`
+- Tidak perlu branch `gh-pages` terpisah
+- Website akan update otomatis setiap kali ada commit ke `main`
 
 ## Live Demo
 
 Website akan otomatis terupdate setiap hari pada jam 07:00 WIB dan dapat diakses melalui GitHub Pages.
 
-**URL**: `https://[username].github.io/[repository-name]`
+**URL**: `https://github.com/XenchinRyu7/Dreams-Countdown.git`
 
 ---
 
