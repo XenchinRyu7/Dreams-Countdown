@@ -17,12 +17,15 @@ def get_hari_indonesia():
         5: "Sabtu",
         6: "Minggu"
     }
-    return hari_map[datetime.datetime.now().weekday()]
+    # Test: gunakan tanggal kemarin untuk memastikan ada perubahan
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+    return hari_map[yesterday.weekday()]
 
 def get_tanggal_format():
     """Mengembalikan tanggal dalam format dd-mm-yyyy"""
-    now = datetime.datetime.now()
-    return now.strftime("%d-%m-%Y")
+    # Test: gunakan tanggal kemarin untuk memastikan ada perubahan
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+    return yesterday.strftime("%d-%m-%Y")
 
 def get_tahun():
     """Mengembalikan tahun saat ini"""
