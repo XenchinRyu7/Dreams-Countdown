@@ -17,6 +17,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -26,14 +27,20 @@ jobs:
     - name: Run generate_hari.py
       run: |
         python generate_hari.py
+        echo "Generated HTML content:"
+        head -10 index.html
     
     - name: Check for changes
       id: verify-changed-files
       run: |
+        echo "Git status:"
+        git status --porcelain
         if [ -n "$(git status --porcelain)" ]; then
           echo "changed=true" >> $GITHUB_OUTPUT
+          echo "Files changed, will commit"
         else
           echo "changed=false" >> $GITHUB_OUTPUT
+          echo "No changes detected"
         fi
     
     - name: Commit and push changes
@@ -43,4 +50,4 @@ jobs:
         git config --local user.name "GitHub Action"
         git add index.html
         git commit -m "Auto-update: $(date '+%d-%m-%Y')"
-        git push
+        git push origin main
