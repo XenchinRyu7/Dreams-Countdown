@@ -17,19 +17,27 @@ def get_hari_indonesia():
         5: "Sabtu",
         6: "Minggu"
     }
-    # Test: gunakan tanggal kemarin untuk memastikan ada perubahan
-    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
-    return hari_map[yesterday.weekday()]
+    # Gunakan timezone WIB (UTC+7)
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    wib_offset = datetime.timedelta(hours=7)
+    now_wib = utc_now + wib_offset
+    return hari_map[now_wib.weekday()]
 
 def get_tanggal_format():
     """Mengembalikan tanggal dalam format dd-mm-yyyy"""
-    # Test: gunakan tanggal kemarin untuk memastikan ada perubahan
-    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
-    return yesterday.strftime("%d-%m-%Y")
+    # Gunakan timezone WIB (UTC+7)
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    wib_offset = datetime.timedelta(hours=7)
+    now_wib = utc_now + wib_offset
+    return now_wib.strftime("%d-%m-%Y")
 
 def get_tahun():
     """Mengembalikan tahun saat ini"""
-    return datetime.datetime.now().year
+    # Gunakan timezone WIB (UTC+7)
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    wib_offset = datetime.timedelta(hours=7)
+    now_wib = utc_now + wib_offset
+    return now_wib.year
 
 def generate_html():
     """Generate file index.html dengan data terbaru"""
