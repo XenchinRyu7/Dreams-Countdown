@@ -57,7 +57,7 @@ Website menggunakan:
    - Source: **Deploy from a branch**
    - Branch: **`main`** / **`root`**
    - Folder: **`/ (root)`**
-4. **Website akan live** di: `https://username.github.io/repo-name`
+4. **Website akan live** di: `https://xenchinryu7.github.io/Dreams-Countdown/`
 
 ### ⚠️ **Catatan**:
 - GitHub Pages akan otomatis deploy dari branch `main`
