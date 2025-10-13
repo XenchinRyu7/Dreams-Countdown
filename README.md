@@ -1,13 +1,13 @@
-# Auto-Streak - Daily Hari Update
+# Daily Info - Hari & Tanggal Terkini
 
-Website statis sederhana yang menampilkan informasi hari dan tanggal terbaru dengan auto-update harian menggunakan GitHub Actions.
+Website statis sederhana yang menampilkan informasi hari dan tanggal dengan update otomatis.
 
 ## Fitur
 
 - 🌐 Website statis dengan desain modern menggunakan TailwindCSS
 - 🎨 Desain glassmorphism yang responsive
 - 📅 Menampilkan nama hari (Senin-Minggu) dan tanggal (dd-mm-yyyy)
-- 🤖 Auto-update harian menggunakan GitHub Actions
+- 🔄 Update otomatis setiap hari
 - 🐍 Script Python untuk generate HTML
 
 ## File Structure
@@ -16,7 +16,7 @@ Website statis sederhana yang menampilkan informasi hari dan tanggal terbaru den
 ├── index.html                    # Website utama (auto-generated)
 ├── generate_hari.py             # Script Python untuk generate HTML
 ├── .github/workflows/
-│   └── daily-hari.yml          # GitHub Actions workflow
+│   └── daily-hari.yml          # Automation workflow
 └── README.md                   # Dokumentasi
 ```
 
@@ -27,10 +27,10 @@ Website statis sederhana yang menampilkan informasi hari dan tanggal terbaru den
    - Generate file `index.html` dengan data terbaru
    - Menggunakan desain TailwindCSS dengan efek glassmorphism
 
-2. **GitHub Actions** (`.github/workflows/daily-hari.yml`) akan:
-   - Berjalan setiap hari pada jam 00:00 UTC (07:00 WIB)
+2. **Automation** akan:
+   - Berjalan setiap hari
    - Menjalankan script Python
-   - Commit dan push perubahan ke repository
+   - Update konten website secara otomatis
 
 ## Cara Menjalankan Manual
 
@@ -48,15 +48,6 @@ Website menggunakan:
 - **Responsive design** untuk semua device
 - **Clean typography** dengan hierarchy yang jelas
 
-## GitHub Actions
-
-Workflow akan otomatis:
-- ✅ Checkout repository
-- ✅ Setup Python environment
-- ✅ Run generate script
-- ✅ Check for changes
-- ✅ Commit & push jika ada perubahan
-
 ## Setup GitHub Pages
 
 1. **Buat Repository Public** di GitHub
@@ -66,19 +57,16 @@ Workflow akan otomatis:
    - Source: **Deploy from a branch**
    - Branch: **`main`** / **`root`**
    - Folder: **`/ (root)`**
-4. **Website akan live** di: `https://XenchinRyu7.github.io/Dreams-Countdown`
+4. **Website akan live** di: `https://username.github.io/repo-name`
 
-### ⚠️ **Catatan Penting**:
+### ⚠️ **Catatan**:
 - GitHub Pages akan otomatis deploy dari branch `main`
-- Tidak perlu branch `gh-pages` terpisah
-- Website akan update otomatis setiap kali ada commit ke `main`
+- Website akan update setiap kali ada commit baru
 
 ## Live Demo
 
-Website akan otomatis terupdate setiap hari pada jam 07:00 WIB dan dapat diakses melalui GitHub Pages.
-
-**URL**: `https://XenchinRyu7.github.io/Dreams-Countdown`
+Website dapat diakses melalui GitHub Pages dan akan menampilkan informasi hari dan tanggal terkini.
 
 ---
 
-*Auto-generated daily via GitHub Actions* 🚀
+*Simple daily info website* ✨
